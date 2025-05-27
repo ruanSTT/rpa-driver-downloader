@@ -1,3 +1,6 @@
+# ⚠️ This library is currently compatible with Python versions up to 3.11.  
+Python 3.12+ is not supported due to `requests` dependency using the removed `cgi` module.
+
 # 🧩 rpa-driver-downloader
 
 **rpa-driver-downloader** is a lightweight Python package that automatically downloads and manages the latest WebDriver binaries (Gecko, Chromium, Edge) for browser automation using **Selenium**, **BotCity**, or any other RPA tool.
@@ -5,7 +8,6 @@
 Whether you're automating browsers on Linux, Windows, or macOS, this library ensures that the required driver is downloaded and ready to use — with just one line of code.
 
 ---
-
 
 ## 🚀 Features
 
@@ -92,6 +94,4 @@ Feel free to check the issues page or submit a pull request.
 ## 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-```text
 rpa-driver-downloader is a Python package that automatically downloads and manages the latest Gecko, Chrome, and Edge WebDriver binaries. Designed for use with Selenium and RPA tools like BotCity, it detects the OS and ensures the correct driver is always available — no manual download required.
-```

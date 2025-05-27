@@ -1,4 +1,3 @@
-# rpa_driver_downloader/gecko.py
 from .base import BaseDriver
 import platform
 import requests

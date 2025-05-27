@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setup(
     name="rpa-driver-downloader",
-    version="0.1.0",
+    version="0.1.1",
     author="Ruan Chaves Machado",
     author_email="whiterun092@gmail.com",
     description="A Python package to automatically download and manage WebDrivers for Gecko, Chrome, and Edge.",
@@ -21,7 +21,7 @@ setup(
         "Topic :: Software Development :: Libraries",
         "Topic :: Utilities",
     ],
-    python_requires='>=3.7',
+    python_requires='>=3.7, <3.12',
     install_requires=[
         "requests",
     ],

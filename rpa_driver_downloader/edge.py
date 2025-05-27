@@ -1,4 +1,3 @@
-# rpa_driver_downloader/edge.py
 from .base import BaseDriver
 import platform
 
