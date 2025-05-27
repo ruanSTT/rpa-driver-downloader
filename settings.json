@@ -1,0 +1,5 @@
+{
+    "geckodriver_path": "C:\\Users\\User\\Documents\\Python-Projects\\rpa-driver_downloader\\drivers\\geckodriver.exe",
+    "chromiumdriver_path": "C:\\Users\\User\\Documents\\Python-Projects\\rpa-driver_downloader\\drivers\\chromedriver-win64",
+    "edgedriver_path": "C:\\Users\\User\\Documents\\Python-Projects\\rpa-driver_downloader\\drivers\\chromedriver-win64"
+}
