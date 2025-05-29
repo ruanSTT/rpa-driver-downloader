@@ -29,21 +29,21 @@ class Chromium(BaseDriver):
             versions = data["versions"]
             version_info = next((v for v in versions if v["version"] == self.version), None)
             if not version_info:
+                available_versions = [v["version"] for v in versions]
                 raise ValueError(
                     f"❌ Chromium version '{self.version}' not found.\n"
-                    f"🔗 See all versions at: https://googlechromelabs.github.io/chrome-for-testing/"
+                    f"🔗 Check available versions at: https://googlechromelabs.github.io/chrome-for-testing/\n"
+                    f"📋 Available versions (example of last 10): {available_versions[-10:]}"
                 )
-            
-            # DEBUG: conferir as chaves
-            print("Available download keys:", version_info["downloads"].keys())
 
-            # A chave pode variar, tente acessar 'chromedriver' ou 'chromedriver_win64'
-            downloads = version_info["downloads"].get("chromedriver")
+            downloads = (
+                version_info["downloads"].get("chromedriver") or
+                version_info["downloads"].get("chromedriver_win64") or
+                version_info["downloads"].get("chrome")
+            )
+
             if downloads is None:
-                downloads = version_info["downloads"].get("chromedriver_win64")
-            
-            if downloads is None:
-                raise KeyError("Could not find 'chromedriver' or 'chromedriver_win64' keys in downloads.")
+                raise KeyError("Could not find 'chromedriver', 'chromedriver_win64', or 'chrome' keys in downloads.")
 
         else:
             url = "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json"

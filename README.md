@@ -20,6 +20,19 @@ Whether you're automating browsers on Linux, Windows, or macOS, this library ens
 - 🧪 Great for testing and RPA automation workflows
 
 
+---
+
+
+## ⚠️ Important
+Your browser **must be installed on the system**.
+
+This package **only** downloads the WebDriver (the browser controller).
+It does **not** install Firefox, Chrome, or Edge themselves.
+
+🔹 This is a common requirement when using Selenium.
+
+🔹 BotCity may work without explicitly referencing the installed browser, depending on configuration.
+
 
 ## 📦 Installation
 
@@ -62,24 +75,23 @@ If a version is specified:
 ```bash
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.service import Service
 from rpa_driver_downloader import Gecko
 
-# Instantiate the Options
+# Create Firefox options
 firefox_options = Options()
 
-# ✅ Using a specific version
-driver = webdriver.Firefox(
-    options=firefox_options,
-    executable_path=Gecko.get_driver_path(version="0.34.0")
-)
+# ✅ Use a specific GeckoDriver version
+service = Service(executable_path=Gecko.get_driver_path(version="0.34.0"))
+driver = webdriver.Firefox(service=service, options=firefox_options)
 driver.get("https://github.com/ruanSTT/rpa-driver-downloader")
+driver.quit()
 
-# ✅ Using the latest available version (default behavior)
-driver = webdriver.Firefox(
-    options=firefox_options,
-    executable_path=Gecko.get_driver_path()  # <- Don’t pass any parameter!
-)
+# ✅ Use the latest GeckoDriver version
+service = Service(executable_path=Gecko.get_driver_path())
+driver = webdriver.Firefox(service=service, options=firefox_options)
 driver.get("https://github.com/ruanSTT/rpa-driver-downloader")
+driver.quit()
 ```
 
 

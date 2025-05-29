@@ -1,0 +1,8 @@
+{
+    "geckodriver_path": "C:\\Users\\User\\Documents\\Python-Projects\\rpa-driver_downloader\\drivers\\geckodriver.exe",
+    "geckodriver_path_version": "0.36.0",
+    "chromiumdriver_path": "C:\\Users\\User\\Documents\\Python-Projects\\rpa-driver_downloader\\drivers\\chromedriver-win64\\chromedriver.exe",
+    "chromiumdriver_path_version": "137.0.7151.55",
+    "edgedriver_path": "C:\\Users\\User\\Documents\\Python-Projects\\rpa-driver_downloader\\drivers\\msedgedriver.exe",
+    "edgedriver_path_version": "124.0.2478.0"
+}
