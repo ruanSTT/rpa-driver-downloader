@@ -1,4 +1,4 @@
-# 🧩 rpa-driver-downloader
+# 🧩 rpa-driver-downloader 0.2.0
 
 **rpa-driver-downloader** is a lightweight Python package that automatically downloads and manages the latest WebDriver binaries (Gecko, Chromium, Edge) for browser automation using **Selenium**, **BotCity**, or any other RPA tool.
 
